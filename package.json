@@ -1,6 +1,6 @@
 {
-  "name": "test",
-  "description": "A Vue.js project",
+  "name": "Appreciation",
+  "description": "A widget for C2t",
   "author": "Sheldon Fernandes <fernsheldon@gmail.com>",
   "private": true,
   "scripts": {

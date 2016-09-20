@@ -1,6 +1,6 @@
-# test
+# C2 Widget - Appreciation
 
-> A Vue.js project
+> A widget for Curiostiy 2
 
 ## Build Setup
 
