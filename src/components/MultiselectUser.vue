@@ -34,7 +34,7 @@ export default {
     });
 
     this.$bus.$on('add-users-for-new-appreciation', function(newAppreciation){
-      if(this.usersTagged){
+      if(this.usersTagged.length){
         newAppreciation.usersTagged = this.usersTagged;
         this.$bus.$emit('save-new-appreciation', newAppreciation)
       }
@@ -45,7 +45,7 @@ export default {
 
   data () {
     return {
-      usersTagged: null,
+      usersTagged: [],
       users: []
     }
   },

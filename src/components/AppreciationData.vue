@@ -49,16 +49,16 @@ export default {
     });
 
     this.$bus.$on('save-new-appreciation', function(newAppreciation){
-      newAppreciation.author = "April O'Neil"; //will need to set the author
+      newAppreciation.author = "Dr.Doom"; //will need to set the author
       api.saveNewAppreciation.save(newAppreciation).then((response) => {
-        console.log("post response: ",JSON.stringify(response));
-
-        //since I can't get the response back, for now we will
+        //success callback
+        //since I can't get the response back right now, we will
         //add the reactions object to the appreciation Object
-        newAppreciation.reactions = {"thumbsup": 0,"heart":0,"heavy_plus_sign":0}
-
-        this.appreciations.unshift(newAppreciation);
-        console.log("the new list:", this.appreciations);
+        if(response.status==200){
+          console.log("response: ",response);
+          newAppreciation.reactions = {"thumbsup": 0,"heart":0,"heavy_plus_sign":0}
+          this.appreciations.unshift(newAppreciation);
+        }
       }, (response) => {
           // Log error
       });
@@ -137,5 +137,6 @@ export default {
 .appreciation-data{
   height: 300px;
   overflow-y: auto;
+  margin-top:25px;
 }
 </style>

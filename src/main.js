@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './components/App.vue'
-Vue.use(require('vue-resource'));
 global.jQuery = require('jquery');
 var $ = global.jQuery;
 var bus = new Vue({});
