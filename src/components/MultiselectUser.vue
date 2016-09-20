@@ -70,7 +70,7 @@ body {
     margin: 15px auto;
     background: #fff;
     padding: 15px;
-    border-radius: 2px;
+    border-radius: 10px;
     box-shadow: 0 1px 5px #ccc;
   }
 </style>

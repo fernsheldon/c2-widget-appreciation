@@ -33,7 +33,7 @@
 
 <script>
 import InfiniteLoading from 'vue-infinite-loading';
-var api = require('./api.js');
+var api = require('./../api.js');
 
 export default {
   components: {

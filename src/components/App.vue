@@ -22,7 +22,7 @@
 </template>
 
 <script>
-// import store from './vuex/store'; // Single source of truth
+
 import AppreciationData from './AppreciationData.vue';
 import MultiselectUser from './MultiselectUser.vue';
 import AppreciationEditor from './AppreciationEditor.vue';
@@ -73,6 +73,6 @@ body {
 }
 
 .dropdown-menu{
-  max-width:500px;
+  width:500px;
 }
 </style>

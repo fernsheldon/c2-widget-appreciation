@@ -1,6 +1,6 @@
 <template>
   <div id="appreciation-editor" class="appreciationBox">
-      <trix-editor input="x"></trix-editor>
+      <trix-editor input="x" placeholder="Add your text here"></trix-editor>
       <button type="submit" class="addButton" @click="createAppreciation">+</button>
     </div>
 </template>
