@@ -3,12 +3,16 @@
       <ul class="list-group">
         <li class="list-group-item appreciationBox" v-for="appreciation in appreciations">
           <div>
-            <span id="appreciation-text" v-html="appreciation.text"></span><br>
-            <div>
-              <span id="appreciation-author" class="label label-success user-margin">By: {{ appreciation.author }}</span>
-            </div>
-            <div id="appreciation-tagged-users">
+
+            <div id="appreciation-tagged-users" class="appreciation-tagged-users">
+              To
               <span class="label label-warning user-margin" v-for="user in appreciation.usersTagged">{{user.name}} </span>
+            </div>
+            <div id="appreciation-text" class="appreciation-text">
+              <span v-html="appreciation.text"></span><br>
+            </div>
+            <div id="appreciation-author" class="appreciation-author">
+              From: <span class="label label-success user-margin">{{ appreciation.author }}</span>
             </div>
             <div id="appreciation-reaction" class="appreciation-reaction">
               Heart
@@ -113,15 +117,39 @@ export default {
 }
 
 .label-success{
-  background-color:#2196F3;
+  background-color: rgba(81, 148, 4, 0);
+  border-radius: 10px;
+  color: grey;
+  border-width: 2px;
+  border: 2px solid lightgreen;
+  cursor: pointer;
 }
 
 .label-warning{
-  background-color:#8BC34A;
+    background-color: rgba(81, 148, 4, 0);
+    border-radius: 10px;
+    color: grey;
+    border-width: 2px;
+    border: 2px solid lightblue;
+    cursor: pointer;
 }
 
+.appreciation-tagged-users{
+  padding-bottom: 25px;
+}
+
+.appreciation-author{
+  float: right;
+  padding-bottom: 25px;
+}
+
+.appreciation-text{
+  padding-bottom: 25px;
+}
 .appreciation-reaction{
   margin-top:20px;
+  visibility: hidden;
+  
 }
 
 .appreciationBox{
